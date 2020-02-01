@@ -36,20 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
         double assign = 0, project = 0, midterm = 0, fin = 0;
 
-       try {
-            assign = Double.parseDouble(assignEarned.getText().toString())
+        assign = Double.parseDouble(assignEarned.getText().toString())
                     / Double.parseDouble(assignPoss.getText().toString());
-            project = Double.parseDouble(projEarned.getText().toString())
+        project = Double.parseDouble(projEarned.getText().toString())
                     / Double.parseDouble(projPoss.getText().toString());
-            midterm = Double.parseDouble(midEarned.getText().toString())
+        midterm = Double.parseDouble(midEarned.getText().toString())
                     / Double.parseDouble(midPoss.getText().toString());
-            fin = Double.parseDouble(finalEarned.getText().toString())
+        fin = Double.parseDouble(finalEarned.getText().toString())
                     / Double.parseDouble(finalPoss.getText().toString());
-        }
-        catch (NumberFormatException numEx) {
-            Toast toast = Toast.makeText(getApplicationContext(), "Number not entered", Toast.LENGTH_SHORT);
-            toast.show();
-        }
 
         double assignWeight = assign * indivAssign;
         double projectWeight = project * teamProject;
