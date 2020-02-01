@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textMyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="72dp"
+        android:text="@string/lois_appiah"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFC107"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textCourseView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/cmsc_355_spring_2020"
+        android:textColor="#676868"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMyName"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <TextView
+        android:id="@+id/textProjectEarned"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/enter_the_team_project_points_earned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAssignPossible" />
+
+    <TextView
+        android:id="@+id/textProjectPossible"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/enter_the_team_project_points_possible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textProjectEarned" />
+
+    <TextView
+        android:id="@+id/textMidtermEarned"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/enter_the_midterm_exam_points_earned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textProjectPossible" />
+
+    <TextView
+        android:id="@+id/textMidtermPossible"
+        android:layout_width="250dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/enter_the_midterm_exam_points_possible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMidtermEarned" />
+
+    <TextView
+        android:id="@+id/textFinalEarned"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/enter_the_final_exam_points_earned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMidtermPossible" />
+
+    <TextView
+        android:id="@+id/textFinalPossible"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/enter_the_final_exam_points_possible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFinalEarned" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="125dp"
+        android:onClick="handleClick"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFinalPossible" />
+
+    <EditText
+        android:id="@+id/editAssignmentEarned"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCourseView" />
+
+    <EditText
+        android:id="@+id/editAssignmentPossible"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="35dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAssignmentEarned" />
+
+    <EditText
+        android:id="@+id/editProjectEarned"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAssignmentPossible" />
+
+    <EditText
+        android:id="@+id/editProjectPossible"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="35dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editProjectEarned" />
+
+    <EditText
+        android:id="@+id/editExamEarned"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editProjectPossible" />
+
+    <EditText
+        android:id="@+id/editExamPossible"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editExamEarned" />
+
+    <EditText
+        android:id="@+id/editFinalEarned"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editExamPossible" />
+
+    <EditText
+        android:id="@+id/editFinalPossible"
+        android:layout_width="80dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFinalEarned"
+        app:layout_constraintVertical_bias="0.312" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="351dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFinalPossible" />
+
+    <TextView
+        android:id="@+id/textAssignPoints"
+        android:layout_width="250dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/enter_the_individual_assignment_points_earned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCourseView" />
+
+    <TextView
+        android:id="@+id/textAssignPossible"
+        android:layout_width="250dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/enter_the_individual_assignment_points_possible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAssignPoints" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/cat_image_1"
+        app:layout_constraintEnd_toStartOf="@+id/textMyName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/cat_image_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textMyName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

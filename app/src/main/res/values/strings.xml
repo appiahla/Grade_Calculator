@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Grade Calculator</string>
+    <string name="lois_appiah">Lois Appiah</string>
+    <string name="cmsc_355_spring_2020">CMSC 355, Spring 2020</string>
+    <string name="enter_the_team_project_points_earned">Enter the Team Project points earned:</string>
+    <string name="enter_the_team_project_points_possible">Enter the Team Project points possible:</string>
+    <string name="enter_the_midterm_exam_points_earned">Enter the Midterm Exam points earned:</string>
+    <string name="enter_the_midterm_exam_points_possible">Enter the Midterm Exam points possible:</string>
+    <string name="enter_the_final_exam_points_earned">Enter the Final Exam points earned:</string>
+    <string name="enter_the_final_exam_points_possible">Enter the Final Exam points possible:</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="your_course_grade_calculates_to">Your course grade calculates to</string>
+    <string name="result">Result</string>
+    <string name="enter_the_individual_assignment_points_earned">Enter the Individual Assignment points earned:</string>
+    <string name="enter_the_individual_assignment_points_possible">Enter the Individual Assignment points possible:</string>
+    <string name="cat_image_1">Cat image 1</string>
+    <string name="cat_image_2">Cat image 2</string>
+</resources>
